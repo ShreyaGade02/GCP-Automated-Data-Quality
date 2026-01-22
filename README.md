@@ -4,73 +4,99 @@
 
 ### Overview
 
-This project implements an automated data quality monitoring and alerting system using Google Cloud Platform. It validates raw data for quality issues and notifies stakeholders automatically when problems are detected.
+This project implements an automated data quality monitoring and alerting system using Google Cloud Platform (GCP). It continuously validates raw data for quality issues and proactively notifies stakeholders when anomalies or data integrity problems are detected, eliminating the need for manual monitoring.
+
 
 
 
 ### Problem Statement
 
-Raw data often contains missing, duplicate, or invalid values. Manual data quality monitoring is inefficient and error-prone. This project solves that by automating validation and alerting.
+In real-world data pipelines, raw data frequently contains issues such as missing values, duplicate records, and invalid entries. Manual data quality checks are inefficient, error-prone, and do not scale with growing data volumes. Without proper monitoring, poor-quality data can lead to inaccurate analytics and flawed business decisions.
 
 
 
-### Architecture
+
+### Solution Architecture
+
+The system is designed as a cloud-native, automated workflow:
 
 Raw Data (BigQuery)
 
-→ Data Quality Checks (Scheduled Query)
+→ Automated Data Quality Checks (Scheduled Queries)
 
-→ Quality Metrics Table
+→ Data Quality Metrics Table
 
 → Alert Status Evaluation
 
-→ Cloud Monitoring Alert
+→ Cloud Monitoring Alert Policy
 
 → Email Notification
+
+This architecture ensures continuous validation and timely alerting when data quality degrades.
+
 
 
 
 ### Key Features
 
-\- Automated daily data quality checks
+* Automated daily data quality validation using BigQuery scheduled queries
 
-\- Detection of null, duplicate, and invalid values
+* Detection of data quality issues including:
 
-\- Threshold-based alerting logic
+  * Null or missing values
 
-\- Email alerts using Cloud Monitoring
+  * Duplicate records
 
-\- Fully tested end-to-end
+  *Invalid numeric values
+
+* Threshold-based alerting logic to identify quality degradation
+
+* Automated email notifications using Google Cloud Monitoring
+
+* Fully tested end-to-end with real alert triggers
+
 
 
 
 ### Technologies Used
 
-\- Google BigQuery
+* Google BigQuery – Data storage, analysis, and scheduled execution
 
-\- Cloud Monitoring
+* Google Cloud Monitoring – Alert policies and notification management
 
-\- Logs-based Metrics
+* Logs-based Metrics – Integration between BigQuery job execution and monitoring
 
-\- SQL
+* SQL – Data validation and rule-based quality checks
 
 
 
-### Testing
 
-The system was tested by inserting bad data into the raw table and validating that:
+### Testing and Validation
 
-\- Quality metrics updated correctly
+The system was validated through end-to-end testing by intentionally inserting invalid data into the raw dataset and confirming that:
 
-\- Alert status changed to ALERT
+* Data quality metrics updated correctly
 
-\- Email notifications were triggered successfully
+* The alert status changed to ALERT based on defined thresholds
+
+* Automated email notifications were successfully triggered
+
+This confirms that the monitoring and alerting pipeline functions as intended.
+
 
 
 
 ### Outcome
 
-The project ensures data reliability by proactively detecting and alerting on data quality issues without manual intervention.
+The project delivers a scalable and reliable data quality monitoring solution that:
+
+* Ensures data reliability before downstream analysis
+
+* Detects issues proactively rather than reactively
+
+* Eliminates the need for continuous manual monitoring
+
+* Follows real-world, production-style cloud data engineering practices
 
 
 
