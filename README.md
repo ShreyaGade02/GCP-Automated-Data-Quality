@@ -1,20 +1,20 @@
-\# Automated Data Quality Monitoring on Google Cloud
+# **Automated Data Quality Monitoring on Google Cloud**
 
 
 
-\## Overview
+### Overview
 
 This project implements an automated data quality monitoring and alerting system using Google Cloud Platform. It validates raw data for quality issues and notifies stakeholders automatically when problems are detected.
 
 
 
-\## Problem Statement
+### Problem Statement
 
 Raw data often contains missing, duplicate, or invalid values. Manual data quality monitoring is inefficient and error-prone. This project solves that by automating validation and alerting.
 
 
 
-\## Architecture
+### Architecture
 
 Raw Data (BigQuery)
 
@@ -30,7 +30,7 @@ Raw Data (BigQuery)
 
 
 
-\## Key Features
+### Key Features
 
 \- Automated daily data quality checks
 
@@ -44,7 +44,7 @@ Raw Data (BigQuery)
 
 
 
-\## Technologies Used
+### Technologies Used
 
 \- Google BigQuery
 
@@ -56,7 +56,7 @@ Raw Data (BigQuery)
 
 
 
-\## Testing
+### Testing
 
 The system was tested by inserting bad data into the raw table and validating that:
 
@@ -68,9 +68,10 @@ The system was tested by inserting bad data into the raw table and validating th
 
 
 
-\## Outcome
+### Outcome
 
 The project ensures data reliability by proactively detecting and alerting on data quality issues without manual intervention.
+
 
 
 
